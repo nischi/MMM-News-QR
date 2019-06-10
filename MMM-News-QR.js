@@ -29,14 +29,18 @@ Module.register("MMM-News-QR", {
 	start: function() {
 		this.config = Object.assign({}, this.defaults, this.config);
     Log.log("Starting module: " + this.name);
-
-    this.sendNotification('ARTICLE_INFO_REQUEST');
-    setInterval(this.sendNotification('ARTICLE_INFO_REQUEST'), this.config.interval);
 	},
 
   notificationReceived: function(notification, payload, sender) {
     if (notification === 'ARTICLE_INFO_RESPONSE') {
       this.handleNews(payload);
+    }
+    if (notification === 'DOM_OBJECTS_CREATED') {
+      var _self = this;
+      // this.sendNotification('ARTICLE_INFO_REQUEST');
+      setInterval(function() {
+        _self.sendNotification('ARTICLE_INFO_REQUEST')
+      }, this.config.interval);
     }
   },
 
