@@ -10,7 +10,7 @@
 Module.register("MMM-News-QR", {
 
 	defaults: {
-		interval   : 1000,
+		interval   : 2000,
 		colorDark  : "#fff",
 		colorLight : "#000",
 		imageSize  : 150

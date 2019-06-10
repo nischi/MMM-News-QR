@@ -10,7 +10,7 @@ Thanks to [Evghenii Marinescu](https://github.com/MarinescuEvghenii "Evghenii Ma
 
 Config | Description
 --- | ---
-`interval` | Because the default newsfeed Module has no sendNotification if he change the news we need to poll it. Default Value are the same as in the newsfeed module <br />**Default Value:** `10000`
+`interval` | Because the default newsfeed Module has no sendNotification if he change the news we need to poll it. <br />**Default Value:** `2000`
 `colorDark` | Color of the Code <br />**Default Value:** `#fff`
 `colorLight` | Background color <br />**Default Value:** `#000`
 `imageSize` | Size of the QR-Code in px <br />**Default Value:** `150`
@@ -21,10 +21,14 @@ Config | Description
 {
     module: 'MMM-News-QR',
     config: {
-        // Delay to turn the TV off
-        delay: 15000,
-        // Use the module MMM-Facial-Recognition-OCV3
-        useFacialRecognitionOCV3: false
+        // Interval to check the news
+        interval: 2000,
+        // Color of the Code
+        colorDark: '#fff',
+        // Background Color
+        colorLight: '#000',
+        // Size of the Code
+        imageSize: 150
     }
 }
 ```
