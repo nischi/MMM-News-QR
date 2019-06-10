@@ -4,7 +4,7 @@ Create a QR-Code of the News which is currently showing in the default [Newsfeed
 Thanks to [Evghenii Marinescu](https://github.com/MarinescuEvghenii "Evghenii Marinescu") for the inspiration of this module and the prework with your Module [MMM-QRCode](https://github.com/MarinescuEvghenii/MMM-QRCode "MMM-QRCode").
 
 ## Screenshot
-
+![Screenshot of QR-code](news-qr.png)
 
 ## Setup the Module
 
