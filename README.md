@@ -11,6 +11,7 @@ Thanks to [Evghenii Marinescu](https://github.com/MarinescuEvghenii "Evghenii Ma
 Config | Description
 --- | ---
 `interval` | Because the default newsfeed Module has no sendNotification if he change the news we need to poll it. <br />**Default Value:** `2000`
+`animationSpeed` | Animation Speed between change <br />**Default Value:** `1000`
 `colorDark` | Color of the Code <br />**Default Value:** `#fff`
 `colorLight` | Background color <br />**Default Value:** `#000`
 `imageSize` | Size of the QR-Code in px <br />**Default Value:** `150`
@@ -23,6 +24,8 @@ Config | Description
     config: {
         // Interval to check the news
         interval: 2000,
+        // Animation between change
+        animationSpeed: 1000,
         // Color of the Code
         colorDark: '#fff',
         // Background Color

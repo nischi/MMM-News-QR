@@ -10,10 +10,11 @@
 Module.register("MMM-News-QR", {
 
 	defaults: {
-		interval   : 2000,
-		colorDark  : "#fff",
-		colorLight : "#000",
-		imageSize  : 150
+    interval        : 2000,
+    animationSpeed  : 1000,
+		colorDark       : "#fff",
+		colorLight      : "#000",
+		imageSize       : 150
   },
 
   text: '',
@@ -57,7 +58,7 @@ Module.register("MMM-News-QR", {
 
     if (news.url !== this.text) {
       this.text = news.url;
-      this.updateDom(100);
+      this.updateDom(this.config.animationSpeed);
     }
   },
 
