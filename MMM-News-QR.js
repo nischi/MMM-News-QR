@@ -15,7 +15,7 @@ Module.register("MMM-News-QR", {
     updateType      : 'push',
     // only needed if updateType is polling
     interval        : 2000,
-    animationSpeed  : 1000,
+    animationSpeed  : 2500,
 		colorDark       : "#fff",
 		colorLight      : "#000",
 		imageSize       : 150
