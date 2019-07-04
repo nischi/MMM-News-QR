@@ -10,7 +10,8 @@ Thanks to [Evghenii Marinescu](https://github.com/MarinescuEvghenii "Evghenii Ma
 
 Config | Description
 --- | ---
-`interval` | Because the default newsfeed Module has no sendNotification if he change the news we need to poll it. <br />**Default Value:** `2000`
+`updateType` | Possible Values are `polling`, `push`. Push works only for MagicMirror 2.8+ because this Version has a Broadcast built in. Please make sure your newsfeed moduel has broadcastNewsFeeds activated.<br />**Default Value:** `push`
+`interval` | If you set updateType to `polling` you need to set the interval of get the newsfeed information <br />**Default Value:** `2000`
 `animationSpeed` | Animation Speed between change <br />**Default Value:** `1000`
 `colorDark` | Color of the Code <br />**Default Value:** `#fff`
 `colorLight` | Background color <br />**Default Value:** `#000`
@@ -22,7 +23,11 @@ Config | Description
 {
     module: 'MMM-News-QR',
     config: {
+        // possible values (polling, push)
+        // push only works with MagicMirror 2.8+ and broadcastNewsFeeds activated
+        updateType : 'push',
         // Interval to check the news
+        // only needed if updateType is polling
         interval: 2000,
         // Animation between change
         animationSpeed: 1000,

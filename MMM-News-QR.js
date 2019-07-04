@@ -10,6 +10,10 @@
 Module.register("MMM-News-QR", {
 
 	defaults: {
+    // possible values (polling, push)
+    // push only works with MagicMirror 2.8+ and broadcastNewsFeeds activated
+    updateType      : 'push',
+    // only needed if updateType is polling
     interval        : 2000,
     animationSpeed  : 1000,
 		colorDark       : "#fff",
@@ -36,7 +40,11 @@ Module.register("MMM-News-QR", {
     if (notification === 'ARTICLE_INFO_RESPONSE') {
       this.handleNews(payload);
     }
-    if (notification === 'DOM_OBJECTS_CREATED') {
+    if (notification === 'NEWS_FEED' && this.config.updateType === 'push') {
+      // if newsmodule feed news, read the information and show QR
+      this.sendNotification('ARTICLE_INFO_REQUEST')
+    }
+    if (notification === 'DOM_OBJECTS_CREATED' && this.config.updateType === 'polling') {
       var _self = this;
       // this.sendNotification('ARTICLE_INFO_REQUEST');
       setInterval(function() {
