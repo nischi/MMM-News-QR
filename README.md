@@ -6,6 +6,16 @@ Thanks to [Evghenii Marinescu](https://github.com/MarinescuEvghenii "Evghenii Ma
 ## Screenshot
 ![Screenshot of QR-code](news-qr.png)
 
+## Installation
+
+Open up your terminal and simply paste the following code
+```sh
+cd ~/MagicMirror/modules
+git clone https://github.com/nischi/MMM-News-QR.git
+cd MMM-News-QR
+npm install
+```
+
 ## Setup the Module
 
 Config | Description
