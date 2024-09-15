@@ -1,4 +1,4 @@
-/* Magic Mirror
+/* MagicMirror²
  * Module: MMM-News-QR
  *
  * By Thierry Nischelwitzer http://nischi.ch
