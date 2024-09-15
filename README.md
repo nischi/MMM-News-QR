@@ -32,25 +32,45 @@ Config | Description
 
 ### Full configuration example of the module
 
-```javascript
-{
-    module: 'MMM-News-QR',
-    position: "top_right",
-    config: {
+```js
+    {
+      module: "MMM-News-QR",
+      position: "top_right",
+      config: {
         // possible values (polling, push)
         // push only works with MagicMirror 2.8+ and broadcastNewsFeeds activated
-        updateType : 'push',
+        updateType: "push",
         // Interval to check the news
         // only needed if updateType is polling
         interval: 2000,
         // Animation between change
         animationSpeed: 2500,
         // Color of the Code
-        colorDark: '#fff',
+        colorDark: "#fff",
         // Background Color
-        colorLight: '#000',
+        colorLight: "#000",
         // Size of the Code
         imageSize: 150
-    }
-},
+      }
+    },
+```
+
+## Troubleshooting
+
+Please check the QR code to see if it represents the correct URL. If `localhost:8080/cors?url=”` or something similar appears before the actual URL try to set `useCorsProxy` to `false` in your newsfeed config. Like this:
+
+```js
+    {
+      module: "newsfeed",
+      position: "top_right",
+      config: {
+        feeds: [
+          {
+            title: "tagesschau.de",
+            url: "https://www.tagesschau.de/xml/rss2/",
+            useCorsProxy: false
+          }
+        ]
+      }
+    },
 ```
