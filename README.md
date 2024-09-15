@@ -1,17 +1,20 @@
 # MMM-News-QR
-Create a QR-Code of the News which is currently showing in the default [Newsfeed](https://github.com/MichMich/MagicMirror/tree/master/modules/default/newsfeed "Newsfeed") Module
 
-Thanks to [Evghenii Marinescu](https://github.com/MarinescuEvghenii "Evghenii Marinescu") for the inspiration of this module and the prework with your Module [MMM-QRCode](https://github.com/MarinescuEvghenii/MMM-QRCode "MMM-QRCode").
+Create a QR-Code of the news which is currently showing in the default [Newsfeed](https://github.com/MagicMirrorOrg/MagicMirror/tree/master/modules/default/newsfeed) module.
+
+Thanks to [Eugen](https://github.com/uxigene) for the inspiration of this module and the prework with your module [MMM-QRCode](https://github.com/uxigene/MMM-QRCode).
 
 ## Screenshot
+
 ![Screenshot of QR-code](news-qr.png)
 
 ## Installation
 
-Open up your terminal and simply paste the following code
+Open up your terminal and simply paste the following code:
+
 ```sh
 cd ~/MagicMirror/modules
-git clone https://github.com/nischi/MMM-News-QR.git
+git clone https://github.com/nischi/MMM-News-QR
 cd MMM-News-QR
 npm install
 ```
@@ -48,5 +51,5 @@ Config | Description
         // Size of the Code
         imageSize: 150
     }
-}
+},
 ```
