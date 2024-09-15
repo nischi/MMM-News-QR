@@ -30,11 +30,12 @@ Config | Description
 `colorLight` | Background color <br />**Default Value:** `#000`
 `imageSize` | Size of the QR-Code in px <br />**Default Value:** `150`
 
-### Full configuration of the module
+### Full configuration example of the module
 
 ```javascript
 {
     module: 'MMM-News-QR',
+    position: "top_right",
     config: {
         // possible values (polling, push)
         // push only works with MagicMirror 2.8+ and broadcastNewsFeeds activated
