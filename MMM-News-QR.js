@@ -27,10 +27,9 @@ Module.register("MMM-News-QR", {
 		return ["MMM-News-QR.css"];
 	},
 
-	getScripts: function() {
-		return ["qrcode.min.js"];
+  getScripts: function() {
+		return [this.file("node_modules/qrcode/build/qrcode.js")];
   },
-
 	start: function() {
 		this.config = Object.assign({}, this.defaults, this.config);
     Log.log("Starting module: " + this.name);
@@ -75,15 +74,25 @@ Module.register("MMM-News-QR", {
 		wrapperEl.classList.add('qrcode');
 
     if (this.text !== '') {
-      const qrcodeEl  = document.createElement("div");
-      new QRCode(qrcodeEl, {
-        text: this.text,
+      const qrcodeEl  = document.createElement("canvas");
+      const options = {
         width: this.config.imageSize,
-        height: this.config.imageSize,
-        colorDark : this.config.colorDark,
-        colorLight : this.config.colorLight,
-        correctLevel : QRCode.CorrectLevel.H
-      });
+        color: {
+          dark: this.config.colorDark,
+          light: this.config.colorLight
+        },
+        errorCorrectionLevel: "H"
+      };
+  
+      QRCode.toCanvas(
+        qrcodeEl,
+        this.text,
+        options,
+        (error) => {
+          if (error) { Log.error(`${this.name}: Error creating QRCode: ${error}`); }
+          Log.log(`${this.name}: successfully created QRCode.`);
+        }
+      );
 
       const imageEl  = document.createElement("div");
       imageEl.classList.add('qrcode__image');
