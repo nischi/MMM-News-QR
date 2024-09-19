@@ -1,0 +1,27 @@
+{
+  "name": "mmm-news-qr",
+  "version": "1.1.0",
+  "description": "MagicMirror² module to create a QR-Code of the news of the default Newsfeed module.",
+  "main": "MMM-News-QR.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nischi/MMM-News-QR.git"
+  },
+  "keywords": [
+    "MagicMirror",
+    "newsfeed",
+    "QR-code"
+  ],
+  "author": "Thierry Nischelwitzer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nischi/MMM-News-QR/issues"
+  },
+  "homepage": "https://github.com/nischi/MMM-News-QR#readme",
+  "devDependencies": {
+    "qrcode": "1.5.1"
+  }
+}
